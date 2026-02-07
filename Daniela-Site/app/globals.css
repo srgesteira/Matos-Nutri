@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sage-green: #8B9A7B;
+    --sage-green-dark: #6B7B5B;
+    --soft-pink: #E8B4B8;
+    --soft-pink-dark: #D4A0A5;
+    --warm-beige: #F5EDE6;
+    --warm-beige-dark: #E8DDD4;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
