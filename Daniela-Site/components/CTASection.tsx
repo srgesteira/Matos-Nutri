@@ -1,7 +1,7 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { CTAButton } from "./CTAButton";
 
 interface CTASectionProps {
   title?: string;
@@ -20,16 +20,20 @@ export function CTASection({
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%5C%2760%5C%27 height=%5C%2760%5C%27 viewBox=%5C%270 0 60 60%5C%27 xmlns=%5C%27http://www.w3.org/2000/svg%5C%27%3E%3Cg fill=%5C%27none%5C%27 fill-rule=%5C%27evenodd%5C%27%3E%3Cg fill=%5C%27%23ffffff%5C%27 fill-opacity=%5C%270.05%5C%27%3E%3Cpath d=%5C%27M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%5C%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+
       <div className="relative mx-auto max-w-3xl px-4 text-center md:px-6">
         <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">
           {title}
         </h2>
+
         <p className="mb-8 text-white/90">{subtitle}</p>
+
         <Link
           href="https://wa.me/5511951731751?text=Olá%20Daniela,%20quero%20agendar%20uma%20consulta"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Agendar no WhatsApp"
         >
           <motion.div
             whileHover={{ y: -3, scale: 1.02 }}
